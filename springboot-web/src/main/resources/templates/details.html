@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+
+Aquí debo configurar el motor de plantilla de timeleaf.
+Está integrado del lado del servidor.
+Luego con el atributo th podré escribir.
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OU YEAH</title>
+    <title th:text="${title}"></title>
 </head>
 <body>
-    <h1>HOLA MI GENTE</h1>
+    <h1 th:text="${title}"></h1>
+    <ul>
+        <!-- Modifico para que aparezca el objeto user-->
+        <li th:text="${user.name}"></li>
+        <li th:text="${user.lastname}"></li>
+    </ul>
 </body>
 </html>
